@@ -3,7 +3,7 @@ import '../styles.css';
 
 const useSortableData = (items, config = null) => {
   const [sortConfig, setSortConfig] = React.useState(config);
-
+ 
   const sortedItems = React.useMemo(() => {
     let sortableItems = [...items];
     if (sortConfig !== null) {
@@ -44,14 +44,16 @@ const ProductTable = (props) => {
     return sortConfig.key === name ? sortConfig.direction : undefined;
   };
   return (
-    <><div><h1> Tabela do Dragão</h1></div>
+    <>
+    <div><h1> Tabela do Dragão</h1></div>
+    <br></br><br></br><br></br> <br></br><br></br> <br></br> <br></br>
    <table>
       <thead>
         <br></br>
         <tr>
           <th>
-            <button
-            
+           
+          <button
               type="button"
               onClick={() => requestSort('name')}
               className={getClassNamesFor('name')}
@@ -62,8 +64,8 @@ const ProductTable = (props) => {
           <th>
             <button
               type="button"
-              onClick={() => requestSort('price')}
-              className={getClassNamesFor('price')}
+              onClick={() => requestSort('date')}
+              className={getClassNamesFor('date')}
             >
               Data de criação
             </button>
@@ -84,7 +86,7 @@ const ProductTable = (props) => {
         {items.map((item) => (
           <tr key={item.id}>
             <td>{item.name}</td>
-            <td>{item.crmv}</td>
+            <td>{item.date} value={Date}</td>
             <td>{item.password}</td>
           </tr>
         ))}
@@ -98,13 +100,13 @@ export default function TabelaSec() {
     <div align="center" className="App">
       <ProductTable
         products={[
-          { id: 1, name: 'Vinícius', crmv: 456654,  password: 324574 },
-          { id: 2, name: 'Rodrigo',  crmv: 456654,  password: 324574 },
-          { id: 3, name: 'Nicolas',  crmv: 456654,  password: 324574 },
-          { id: 4, name: 'Amanda',  crmv: 456654,   password: 324574 },
-          { id: 5, name: 'Leticia',  crmv: 456654,  password: 324574 },
-          { id: 6, name: 'Beatriz ',  crmv: 456654, password: 324574 },
-          { id: 7, name: 'Carlos',  crmv: 456654,   password: 324574  },
+          { id: 1, name: 'Carolea', date: 20210816,  password: 324574 },
+          { id: 2, name: 'BrownsICE',  data: 456654,  password: 324574 },
+          { id: 3, name: 'Smaug',  data: 456654,  password: 324574 },
+          { id: 4, name: 'Gorynych',  data: 456654,   password: 324574 },
+          { id: 5, name: 'Draco',  data: 456654,  password: 324574 },
+          { id: 6, name: 'Caçador04 ',  data: 456654, password: 324574 },
+          { id: 7, name: 'Dagonyy',  data: 456654,   password: 324574  },
           
         ]}
       />

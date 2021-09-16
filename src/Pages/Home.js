@@ -8,10 +8,7 @@ function Home() {
         <div>
 
             <div align="center" class="title">
-                <h1>QueueVet</h1>
-            </div>
-            <div align="center" class="title">
-                <h2>Sua Fila Inteligente</h2>
+                <h1>Dragão</h1>
             </div>  
         </div>
     );
