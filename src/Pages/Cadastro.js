@@ -27,20 +27,17 @@ function Cadastro() {
             <br></br>
 
             <div align="center">
-                <input type="text" name="name" placeholder="Nome Completo:" onChange={handleInputChange} value={formValues.name || ''} />
+                <input type="text" name="name" placeholder="Nome do Dragão:" onChange={handleInputChange} value={formValues.name || ''} />
                 <br></br><br></br>
-                <input type="number" name="idade" placeholder="Idade do Animal:" onChange={handleInputChange} value={formValues.idade || ''} />
+                <input type="date" name="date" placeholder="Data da Criação:" onChange={handleInputChange} value={formValues.date || ''} />
                 <br></br><br></br>
-                <input type="text" name="animalname" placeholder="Nome do Animal:" onChange={handleInputChange} value={formValues.animalname || ''} />
+                <input type="text" name="tipo" placeholder="Tipo:" onChange={handleInputChange} value={formValues.tipo || ''} />
                 <br></br><br></br>
-                <input type="email" name="email" placeholder="Email:" onChange={handleInputChange} value={formValues.email || ''} />
-                <br></br><br></br>
-                <input type="password" name="password" placeholder="Senha:" onChange={handleInputChange} value={formValues.password || ''} />
             </div>
             
             <br></br>
             <div align="center" class="wrapper">
-            <a href="/"><button class="button" type="submit">Enviar</button></a>
+            <a href="/"><button class="button" >Enviar</button></a>
             </div>
 
             <br></br>
