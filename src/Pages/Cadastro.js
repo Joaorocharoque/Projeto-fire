@@ -28,19 +28,19 @@ function Cadastro() {
 
             <div align="center">
                 <input type="text" name="name" placeholder="Nome Completo:" onChange={handleInputChange} value={formValues.name || ''} />
-                <br></br>
+                <br></br><br></br>
                 <input type="number" name="idade" placeholder="Idade do Animal:" onChange={handleInputChange} value={formValues.idade || ''} />
-                <br></br>
+                <br></br><br></br>
                 <input type="text" name="animalname" placeholder="Nome do Animal:" onChange={handleInputChange} value={formValues.animalname || ''} />
-                <br></br>
+                <br></br><br></br>
                 <input type="email" name="email" placeholder="Email:" onChange={handleInputChange} value={formValues.email || ''} />
-                <br></br>
+                <br></br><br></br>
                 <input type="password" name="password" placeholder="Senha:" onChange={handleInputChange} value={formValues.password || ''} />
             </div>
             
             <br></br>
             <div align="center" class="wrapper">
-                <button class="button" type="submit">Enviar</button>
+            <a href="/"><button class="button" type="submit">Enviar</button></a>
             </div>
 
             <br></br>
