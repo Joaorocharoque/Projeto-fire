@@ -46,13 +46,13 @@ const ProductTable = (props) => {
   return (
     <>
     <div><h1> Tabela do Dragão</h1></div>
-    <br></br><br></br><br></br> <br></br><br></br> <br></br> <br></br>
+    <br></br> <br></br> <br></br>
    <table>
       <thead>
         <br></br>
         <tr>
           <th>
-           
+          
           <button
               type="button"
               onClick={() => requestSort('name')}
@@ -74,8 +74,8 @@ const ProductTable = (props) => {
           <th>
             <button
               type="button"
-              onClick={() => requestSort('password')}
-              className={getClassNamesFor('password')}
+              onClick={() => requestSort('tipo')}
+              className={getClassNamesFor('tipo')}
             >
               Tipo
             </button>
@@ -86,9 +86,9 @@ const ProductTable = (props) => {
         {items.map((item) => (
           <tr key={item.id}>
             <td>{item.name}</td>
-            <td>{item.date} value={Date}</td>
-            <td>{item.password}</td>
-          </tr>
+            <td>{item.data}</td>
+            <td>{item.tipo}</td>
+          </tr> 
         ))}
       </tbody>
     </table></>
@@ -100,13 +100,18 @@ export default function TabelaSec() {
     <div align="center" className="App">
       <ProductTable
         products={[
-          { id: 1, name: 'Carolea', date: 20210816,  password: 324574 },
-          { id: 2, name: 'BrownsICE',  data: 456654,  password: 324574 },
-          { id: 3, name: 'Smaug',  data: 456654,  password: 324574 },
-          { id: 4, name: 'Gorynych',  data: 456654,   password: 324574 },
-          { id: 5, name: 'Draco',  data: 456654,  password: 324574 },
-          { id: 6, name: 'Caçador04 ',  data: 456654, password: 324574 },
-          { id: 7, name: 'Dagonyy',  data: 456654,   password: 324574  },
+          { id: 1, name: 'Carolea',    data: '2021-08-16',      tipo: 'violet2' }, 
+          { id: 2, name: 'BrownsICE',  data: '2021-08-15',      tipo: 'olive' },
+          { id: 3, name: 'Smaug',      data: '2021-08-23',      tipo: 'Fogo' },
+          { id: 4, name: 'Gorynych',   data: '2021-08-23',      tipo: 'Terra' },
+          { id: 5, name: 'Draco',      data: '2021-08-29',      tipo: 'Vento COLDER' },
+          { id: 6, name: 'Caçador04 ', data: '2021-08-24',      tipo: 'Revoltadão' },
+          { id: 7, name: 'Dagonyy',    data: '2021-08-28',      tipo: 'Revoltado' },
+          { id: 8, name: 'New Frost',  data: '2021-06-16',      tipo: 'Ice' },
+          { id: 9, name: 'Dino',       data: '2021-09-09',      tipo: 'Da silva sauro' },
+          { id: 10, name: 'Um novo dragãozinho',    data: '2021-07-14',      tipo: 'fofo e verde' },
+          { id: 11, name: 'Batatão',    data: '2021-07-18',      tipo: 'fritão' },
+          { id: 12, name: 'Tiamat',    data: '2021-09-04',      tipo: 'Deus' },
           
         ]}
       />

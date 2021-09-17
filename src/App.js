@@ -3,7 +3,7 @@ import api from "./services/api";
 import './App.css';
 import Navbar from './Components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './Pages/Home';
+import Cadastro from './Pages/Cadastro';
 import TabelaDrag from './Pages/TabelaDrag';
 
 
@@ -13,8 +13,8 @@ import TabelaDrag from './Pages/TabelaDrag';
     <Router>
       <Navbar />
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/TabelaDrag' component={TabelaDrag} />
+        <Route path='/Cadastro' exact component={Cadastro} />
+        <Route path='/' component={TabelaDrag} />
       </Switch>
     </Router>
   </>
